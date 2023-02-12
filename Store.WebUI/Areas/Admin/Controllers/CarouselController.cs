@@ -7,7 +7,7 @@ using Store.WebUI.Utils;
 
 namespace Store.WebUI.Areas.Admin.Controllers
 {
-    [Area("Admin"), Authorize = "AdminPolicy")]
+    [Area("Admin"), Authorize(Policy = "AdminPolicy")]
     public class CarouselController : Controller
     {
         private readonly IService<Carousel> _service;
