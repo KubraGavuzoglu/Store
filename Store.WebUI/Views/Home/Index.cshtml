@@ -14,11 +14,11 @@
 }
 
 <!-- Header-->
-<header class="bg-dark py-3 mt-5">
-    <div class="container px-4 px-lg-5 my-5">
-        <div class="text-center text-white">
-            <h1 class="display-4 fw-bolder">Ürünlerimiz</h1>
-            <p class="lead fw-normal text-white-50 mb-0">Sizin için seçtiklerimiz</p>
+<header class="bg-light py-3 mt-5">
+    <div class="container px-4 px-lg-5 my-2">
+        <div class="text-center text-dark">
+            <h4 class="display-9 fw-bolder">  Sizin İçin Seçtiklerimiz   </h4>
+           @* <p class="lead fw-normal text-white-50 mb-0">Sizin için seçtiklerimiz</p>*@
         </div>
     </div>
 </header>
@@ -26,16 +26,16 @@
 <partial name="_Products" model="Model.Products" />
 
 <!-- Header-->
-<header class="bg-dark py-3 my-5">
-    <div class="container px-4 px-lg-5 my-5">
-        <div class="text-center text-white">
-            <h1 class="display-4 fw-bolder">Markalar</h1>
-            <p class="lead fw-normal text-white-50 mb-0">En iyi markalar burada</p>
+<header class="bg-light py-3 mt-5">
+    <div class="container px-4 px-lg-5 my-2">
+        <div class="text-center text-dark">
+            <h4 class="display-9 fw-bolder">  Markalar  </h4>
+           @* <p class="lead fw-normal text-white-50 mb-0">En iyi markalar burada</p>*@
         </div>
     </div>
 </header>
 
-<div class="row">
+<div class="row mt-2">
     @foreach (var item in Model.Brands)
     {
         <div class="col">
