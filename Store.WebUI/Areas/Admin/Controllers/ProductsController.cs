@@ -54,7 +54,7 @@ namespace Store.WebUI.Areas.Admin.Controllers
             {
                 try
                 {
-                    if (Image is not null) product.Image = await FileHelper.FileLoaderAsync(Image, filePath: "~/wwwroot/Img/");
+                    if (Image is not null) product.Image = await FileHelper.FileLoaderAsync(Image, filePath: "/wwwroot/Img/");
                     await _service.AddAsync(product);
                     await _service.SaveChangesAsync();
                     return RedirectToAction(nameof(Index));
@@ -89,13 +89,13 @@ namespace Store.WebUI.Areas.Admin.Controllers
                 {
                     if (resmisil == true)
                     {
-                        FileHelper.FileRemover(product.Image, filePath: "~/wwwroot/Img/");
+                        FileHelper.FileRemover(product.Image, filePath: "/wwwroot/Img/");
                         product.Image = string.Empty;
                     }
                     if (Image is not null)
                     {
-                        FileHelper.FileRemover(product.Image, filePath: "~/wwwroot/Img/");
-                        product.Image = await FileHelper.FileLoaderAsync(Image, filePath: "~/wwwroot/Img/");
+                        FileHelper.FileRemover(product.Image, filePath: "/wwwroot/Img/");
+                        product.Image = await FileHelper.FileLoaderAsync(Image, filePath: "/wwwroot/Img/");
                     }
                     _service.Update(product);
                     await _service.SaveChangesAsync();
@@ -125,7 +125,7 @@ namespace Store.WebUI.Areas.Admin.Controllers
         {
             try
             {
-                FileHelper.FileRemover(product.Image, filePath: "~/wwwroot/Img/");
+                FileHelper.FileRemover(product.Image, filePath: "/wwwroot/Img/");
                 _service.Delete(product);
                 _service.SaveChanges();
                 return RedirectToAction(nameof(Index));
